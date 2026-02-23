@@ -1,0 +1,67 @@
+use_bpm 160
+use_synth :saw
+7.times do
+  play :C4, amp: 0.1, pitch: -15
+  sleep 0.5
+  play :E4, amp: 0.1, pitch: -15
+  sleep 0.5
+  play :G4, amp: 0.1, pitch: -15
+  sleep 0.5
+  play :B4, amp: 0.1, pitch: -15
+  sleep 0.5
+  play :C5, amp: 0.1, pitch: -15
+  sleep 0.5
+  play :B4, amp: 0.1, pitch: -15
+  sleep 0.5
+  play :G4, amp: 0.1, pitch: -15
+  sleep 0.5
+  play :E4, amp: 0.1, pitch: -15
+  sleep 0.5
+end
+play :C4, amp: 0.1, pitch: -5
+sleep 0.5
+play :E4, amp: 0.1, pitch: -5
+sleep 0.5
+play :G4, amp: 0.1, pitch: -5
+sleep 0.5
+play :B4, amp: 0.1, pitch: -5
+sleep 0.5
+play :C5, amp: 0.1, pitch: -5
+sleep 0.5
+sleep 1.5
+
+live_loop :strange do
+  play :C4, amp: 0.3
+  sleep 0.5
+  play :E4, amp: 0.3
+  sleep 0.5
+  play :G4, amp: 0.3
+  sleep 0.5
+  play :B4, amp: 0.3
+  sleep 0.5
+  play :C5, amp: 0.3
+  sleep 0.5
+  play :B4, amp: 0.3
+  sleep 0.5
+  play :G4, amp: 0.3
+  sleep 0.5
+  play :E4, amp: 0.3
+  sleep 0.5
+end
+live_loop :heart do
+  sample :bd_haus, amp: 0.1
+  sleep 1
+  sample :bd_haus, amp: 0.1
+  sleep 3
+end
+sleep 32
+live_loop :spook do
+  use_synth :prophet
+  use_synth_defaults depth: 2, divisor: 1, sustain: 2, release: 0.5, amp: 0.1
+  play :C2
+  sleep 2
+  use_synth :prophet
+  use_synth_defaults depth: 2, divisor: 1, sustain: 2, release: 0.5, amp: 0.1
+  play :C3
+  sleep 987098
+end
